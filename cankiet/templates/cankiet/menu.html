@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{canteen.c_name}} | KIET</title>
+    <style>
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: right;
+        }
+        .navbar span {
+            margin-right: 15px;
+        }
+        .item-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span>Welcome, {{ request.session.user.name }}!</span>
+    </div>
+    <h1>Your Recent Orders</h1>
+    <div id="item-container">
+        {% for item in items %}
+            <div class="item-card">
+                <img src="{{item.i_image.url}}" height="40px" alt="">
+                <h2>{{ item.item }}</h2>
+                <p><strong>Price:</strong> ₹{{ item.price }}</p>
+                <form method="post" action="{% url 'cart' canteen.c_no %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="i_no" value="{{ item.i_no }}">
+                    <label for="quantity_{{ item.i_no }}">Quantity:</label>
+                    <input type="number" id="quantity_{{ item.i_no }}" name="quantity" min="1" value="1" required>
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

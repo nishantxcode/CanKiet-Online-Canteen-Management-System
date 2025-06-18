@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Confirmation</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/payment.css">
+  <link rel="icon" type="image/x-icon" href="/static/images/cankiet_logo.png">
+</head>
+<body>
+  <div class="container my-5">
+    <div class="card shadow p-4">
+      <div class="text-center">
+        <img src="https://cdn.dribbble.com/users/2185205/screenshots/7886140/media/90211520c82920dcaf6aea7604aeb029.gif"   alt="Payment Successful" class="mb-0 mt-0 " style="width: 250px; height:200px">
+        <h2 class="text-success">Payment Successful!</h2>
+        <p class="lead">Thank you for your payment. Your transaction was completed successfully.</p>
+      </div>
+      <div class="mt-4">
+        <h5>Payment Details:</h5>
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <th>Order ID</th>
+              <td>{{order.razorpay_order_id}}</td>
+            </tr>
+            <tr>
+              <th>Amount Paid</th>
+              <td>₹{{order.total_amount}}.00</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{order.o_date}}</td>
+            </tr>
+            <tr>
+              <th>Transaction ID</th>
+              <td>{{order.payment_id}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center mt-4">
+        <a href="{% url 'index2' %}" class="btn btn-success">Go to Homepage</a>
+        <a href="{% url 'orders' %}" class="btn btn-secondary">View Orders</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

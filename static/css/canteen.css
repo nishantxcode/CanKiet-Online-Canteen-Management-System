@@ -1,0 +1,161 @@
+.maincontainer{
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.container-can{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: absolute;
+    top: 20px;
+    
+}
+
+.card-custom {
+    width: 18rem;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.btn-custom {
+    background-color: #ff9100;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+.card-custom:hover {
+    transform: scale(1.1); /* Scale up the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow for a more pronounced effect */
+  }
+
+
+
+  
+footer {
+    background-color: #000000;
+    color: #fff;
+  }
+  
+  footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  
+  footer p {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  footer .social-icons i {
+    font-size: 24px;
+  }
+  
+  footer .social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  @media (min-width: 576px) {
+    .carousel-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+    
+      .carousel-container .col-sm-4 {
+        position: relative;
+        z-index: 1;
+      }
+    }
+    /* Media Query for devices with max-width 1200px (large screens, like laptops) */
+@media (max-width: 1200px) {
+    .maincontainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-custom {
+        width: 16rem; /* Slightly smaller card size for medium screens */
+        margin: 15px;
+    }
+}
+
+/* Media Query for devices with max-width 992px (tablets) */
+@media (max-width: 992px) {
+    .maincontainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card-custom {
+        width: 14rem; /* Make cards even smaller on tablets */
+        margin: 10px;
+    }
+}
+
+/* Media Query for devices with max-width 768px (smaller tablets or larger mobile screens) */
+@media (max-width: 768px) {
+    .maincontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-custom {
+        width: 100%; /* Cards should take full width on mobile devices */
+        margin: 10px 0;
+    }
+
+    .carousel-inner img {
+        height: 300px; /* Smaller carousel images for mobile */
+    }
+}
+
+/* Media Query for devices with max-width 576px (small screens like phones) */
+@media (max-width: 576px) {
+    .maincontainer {
+        flex-direction: column;
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .card-custom {
+        width: 100%; /* Cards should be full width on small screens */
+        margin: 10px 0;
+    }
+
+    .carousel-inner img {
+        height: 250px; /* Even smaller carousel images for smaller mobile devices */
+    }
+}
