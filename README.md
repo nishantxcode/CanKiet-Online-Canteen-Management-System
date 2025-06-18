@@ -6,6 +6,14 @@ A comprehensive Django-based web application designed to streamline the canteen 
 
 The Online Canteen Management System is built to solve the common challenges faced in college canteens by digitizing the ordering process. Students can easily browse available food items, place orders online, and track their order status, while canteen administrators can efficiently manage inventory and orders.
 
+## 📽️ Project Demo
+
+
+
+https://github.com/user-attachments/assets/5e1e188a-19c6-42b7-b4b8-4508fc269a59
+
+
+
 ## ✨ Key Features
 
 ### 🎯 Core Functionality
